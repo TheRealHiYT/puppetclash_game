@@ -1,2 +1,2 @@
-# puppetclash_game
+# PuppetClash_TheGame
  
