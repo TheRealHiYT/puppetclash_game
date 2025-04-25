@@ -252,11 +252,12 @@ def character_selection():
 
         # Load and show character image based on selected skin
 
-        for category in characters.values():
-            if name in category:
-                images = category[name]["image"]
-                image_path = images.get(skin_choice, images.get("Default"))
+        for game_categorys in characters.values():
+            if name in game_categorys:
+                images = game_categorys[name]["image"]
+
                 try:
+                    image_path = images.get(skin_choice, images.get("Default"))
                     img = Image.open(image_path)
                     img = img.resize((200, 300), Image.LANCZOS)
                     photo = ImageTk.PhotoImage(img)
@@ -316,7 +317,7 @@ def character_selection():
         # Do whatever comes next...
 
     confirm_button = tk.Button(frame, text="Confirm Characters", font=("Terminal", 14, "bold"),
-                               command=start_battle)
+                               command=battle_screen)
     confirm_button.place(x=450, y=800)
 
 
@@ -333,6 +334,7 @@ def select_character(name, player_num):
 def start_battle():
     global player1_character, player2_character
     if player1_character and player2_character:
+        battle_screen()  # Make sure the battle frame is created before attempting to access it.
         show_frame("Battle")
         setup_battle()
     else:
@@ -496,14 +498,14 @@ def reset_battle():
     show_frame("Character Selection")
 
 
-def display_character(name, characters):
+def display_character(name, character_list):
     show_frame("Character Info")
     char_info = frames["Character Info"]
 
     for widget in char_info.winfo_children():
         widget.destroy()
 
-    details = next((char_list[name] for char_list in characters.values() if name in char_list), None)
+    details = next((char_list[name] for char_list in character_list.values() if name in char_list), None)
     if not details:
         print(f"Character {name} not found.")
         return
