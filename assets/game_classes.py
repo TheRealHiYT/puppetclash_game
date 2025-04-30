@@ -1,3 +1,6 @@
+from typing import Literal, Union
+from os import PathLike
+
 characters = {
     "\"Gods\"": {
         "Nosear": {
@@ -135,3 +138,42 @@ characters = {
     }
 }
 
+
+class Character:
+    def __init__(self, race: Union[Literal["Gods"], Literal["Beasts"], Literal["Human"], Literal["Undead"]], name: str, skin_list: dict[str: PathLike], hp: int, attack: int, defense: int, speed: int, moveset: dict[list[str, int, dict[str, int]]]):
+        self.__race = race
+        self.__name = name
+        self.__skin_list = skin_list
+        self.__max_hp = hp
+        self.hp = hp
+        self.__attack = attack
+        self.__defense = defense
+        self.__speed = speed
+        self.__moveset = moveset
+
+    def get_race(self):
+        return self.__race
+
+    def get_name(self):
+        return self.__name
+
+    def get_skin_list(self):
+        return self.__skin_list
+
+    def get_hp(self):
+        return self.__max_hp
+
+    def get_attack(self):
+        return self.__attack
+
+    def get_defense(self):
+        return self.__defense
+
+    def get_speed(self):
+        return self.__speed
+
+    def get_moveset(self):
+        return self.__moveset
+
+    def use_move(self, target, move_name: str, move_dmg: int, move_effect: str):
+        target.hp -= (self.get_attack() + move_dmg) - target.get_defense()
