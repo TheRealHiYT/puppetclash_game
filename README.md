@@ -1,4 +1,4 @@
-# PuppetClash_TheGame
+# Puppet Clash: The Game
 
 
 (how i wanted the characters to be, but I'm not too good. Really, I focused more on the individual characters rather than their interaction in a fight. They don't seem that balanced, but if everyone's super then no one is. So it may fix itself.)
@@ -19,8 +19,3 @@ Alexander - all-rounder (ult is based on the indomitable human spirit)
 Skeleton - built like a mini-tank
 
 Zombie Octopus - dancer/annoyance
-
-## Secret (password protected so only accessible to devs but not really important)
-Lineworks - glass cannon
-
-??? - (if we can get the game basically done, we could make a dev character for you.)
