@@ -2,4 +2,4 @@
 
 Lineworks - glass cannon
 
-Mikuna - high damage all-rounder
+Mikuna - extremely fast w/ high damage. low durability but has a random chance to activate "focus"

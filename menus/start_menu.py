@@ -174,7 +174,7 @@ def main_menu():
     back_imge.place(x=0, y=0, relwidth=1, relheight=1)
     back_imge.lower()
 
-    title_label = tk.Label(homo, text="Lady Secret's Violence Core", font=("Terminal", 30, "bold"), fg="Black",
+    title_label = tk.Label(homo, text="Puppet Clash: The Game", font=("Terminal", 30, "bold"), fg="Black",
                            bg="#f0f0f0")
     title_label.place(relx=0.5, rely=0.4, anchor="center")
 
