@@ -33,7 +33,7 @@ characters = {
                            "\"??????\": But once he was awakened, humanity realized their end was near, and he would not let any human escape his wrath\n "
                            "\"??????\": 'Isn't it ironic? When granted everything, you can't do anything.'\n "
                            "\"??????\": Ah, how familiar that line is.. well even if it's overused, it's still true, isn't it?\n"
-                           "\"??????\": Ironic that humanity made that line, because the ",
+                           "\"??????\": Ironic that humanity made that line, but they never listened to themselves anyway.",
 
             "char_variable": list(),
             "stats": {"HP": 1500, "Attack": 23, "Defense": 1000, "Speed": 15},
